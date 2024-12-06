@@ -8,15 +8,132 @@
 </head>
 <body>
     <nav class="nav-flex padding">
-        <div class="">Logo</div>
-        <div class="">Nav</div>
+        <div><img class="logo" src="images/Visio_Logo.png" alt="logo"></div>
+
+        <span class="burger
+        " style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
     </nav>
+
     <section class="slider padding">
-        rahhh
+        <div class="slideshow-container">
+
+            <div class="mySlides slide-in">
+              <!-- <div class="numbertext">1 / 3</div> -->
+              <img src="images/slider/sergey-pesterev-FRMt.png">
+              <h1 class="text">LOOK BEYOND THE ORDINARY</h1>
+            </div>
+            
+            <div class="mySlides slide-in">
+              <!-- <div class="numbertext">2 / 3</div> -->
+              <img src="images/slider/ImageSlider2.jpg">
+              <h1 class="text">WE LEAVE NO STONE UNTURNED</h1>
+            </div>
+            
+            <div class="mySlides slide-in">
+              <!-- <div class="numbertext">3 / 3</div> -->
+              <img src="images/slider/ImageSlider3.jpg">
+              <h1 class="text">WE CAN AND WE WILL</h1>
+            </div>
+            
+            <!-- <a class="prev" onclick="plusSlides(-1)">❮</a> -->
+            <a class="next" onclick="plusSlides(1)"><img src="images/Arrow.png" alt=""></a>
+            
+            <div class="dot-box">
+              <span class="dot" onclick="currentSlide(1)">
+                <img src="images/Circle.png" alt="" class="dot-img">
+              </span>
+              <span class="dot" onclick="currentSlide(2)">
+                <img src="images/Circle.png" alt="" class="dot-img">
+              </span>
+              <span class="dot" onclick="currentSlide(3)">
+                <img src="images/Circle.png" alt="" class="dot-img">
+              </span>
+            </div>
+
+    
+            </div>
     </section>
-    <section class="text padding">
-        <div class="paragraph">nignigbiigigdswniggabidadnabs</div>
-        <div class="logos">If I wasnt broke</div>
+
+    <section class="text-section padding">
+        <div class="paragraph padding-text">Visio is an investment firm intially founded by Patrice Moyai in 2023. The nimble, highly focused and dynamic team manage assets across listed stratagies for a diversified client base that includes some of the world's largest and most sophisticated investors</div>
+        <div class="logos padding-logos">
+            <img src="images/Rectangle.png" alt="">
+            <img src="images/QC_Right.png" alt="">
+            <img src="images/MT.png" alt="">
+            <img src="images/Forward_Slash.png" alt="">
+            <img src="images/QC_Down.png" alt="">
+            <img src="images/Rectangle_I.png" alt="">
+            <img src="images/QC_Top.png" alt="">
+        </div>
     </section>
+
+    <section class="box padding">
+        <div class="box-item">
+          <div class="start-flex">
+            <img class="mt" src="images/MT.png" alt="">
+            <h2 class="mt-text">The Visio<br> difference</h2>
+          </div>
+        </div>
+
+        <div class="box-item">
+          <div class="start-flex">
+            <img class="mt" src="images/MT.png" alt="">
+            <h2 class="mt-text">Meet the<br> Visio team</h2>
+          </div>
+        </div>
+
+        <div class="box-item">
+          <div class="start-flex">
+            <img class="mt" src="images/MT.png" alt="">
+            <h2 class="mt-text">Our funds and<br> investments</h2>
+          </div>
+        </div>
+    </section>
+
+    <section class="box-mini padding">
+
+        <div class="box-mini-item ms">
+          <P>hedge funds</P>
+          <img class="sma" src="images/Path 27.png" alt="">
+        </div>
+        
+        <div class="box-mini-item ms">
+          <P>unit trusts</P>
+          <img class="sma" src="images/Path 27.png" alt="">
+        </div>
+
+        <div class="box-mini-item ms">
+          <P>segregated mandates</P>
+          <img class="sma" src="images/Path 27.png" alt="">
+        </div>
+
+        <div class="box-mini-item ms">
+          <P>Africa funds</P>
+          <img class="sma" src="images/Path 27.png" alt="">
+        </div>
+
+        <div class="box-mini-item ms">
+          <P>fund performance</P>
+          <img class="sma" src="images/Path 27.png" alt="">
+        </div>
+
+        <div class="box-mini-item ms">
+          <P>risk management</P>
+          <img class="sma" src="images/Path 27.png" alt="">
+        </div>
+
+    </section>
+
+    <script src="javascript/script.js"></script>
 </body>
 </html>

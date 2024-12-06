@@ -1,63 +1,311 @@
+*{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+img{
+    width: 100%;
+    margin: 10px;
+}
+.logo{
+    width: 128px;
+    padding: 16px 0px;
+}
+.burger{
+  font-size:30px;
+  cursor:pointer;
+  padding: 16px 0px;
+}
 .nav-flex{
     display: flex;
     justify-content: space-between;
 }
+#myLinks {
+    display: none;
+  }
 .padding{
-    padding: 0vw 10vw;
+    padding: 0vw 6vw;
 }
-.slider{
-    display: flex;
-    justify-content: center;
-    min-height: 60vh;
-    background-color: blue;
+.padding-text{
+    padding: 0vw 5vw 0vw 0vw;
 }
-.text{
-    display: flex;
-    justify-content: center;
-    min-height: 20vh;
-    background-color: green;
-}
-.paragraph{
-    /* min-width: 70vw; */
-    text-align: end;
-}
-.logos{
-    /* min-width: 30vw; */
-    text-align: start;
+.padding-logos{
+    padding: 0vw 5vw 0vw 0vw;
 }
 
+  /* slider */
+  * {box-sizing: border-box}
+body {font-family: "open sans"; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin-bottom: 5%;
+
+}
+
+/* Next button */
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  right: 2%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  /* transition: 0.6s ease; */
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 16px;
+  padding: 32px 32px;
+  position: absolute;
+  width: 50%;
+  text-align: center;
+  top: 50%;
+  right:65%;
+  background-color: #244AC2;
+  animation: slide-in 2s ease-in-out;
+}
+
+/* Dot */
+.dot-box{
+  position: absolute;
+  bottom: 5%;
+  right: 2%;
+
+}
+.dot {
+  width: 22px;
+  aspect-ratio: 1/1;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 1px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.1s ease-in-out 0.3s;
+}
+
+.active,
+.dot:hover {
+  opacity: 0.39;
+  transform: rotate(10.5deg);
+  transition: 0.3s ease 0.3s;
+}
+
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-200)
+  } 
+  to {
+    transform: translateX(0)
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.text-section{
+    display: flex;
+    justify-content: space-between;
+    min-height: 20vh;
+}
+.paragraph{
+    max-width: 50vw;
+    text-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+}
+.logos{
+    max-width: 40vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 equal columns */
+    grid-template-rows: auto; /* Automatic row height */
+    gap: 10px; /* Space between items */
+    padding-bottom: 1%;
+}
+.start-flex{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-flow: column;
+}
+.mt{
+  width: 32px;
+}
+.mt-text{
+  color: white;
+  text-align: start;
+}
+.box-item{
+  background-color: #061C2C;
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 10px;
+}
+.box-mini{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 3 equal columns */
+    grid-template-rows: auto; /* Automatic row height */
+    gap: 10px; /* Space between items */
+}
+.box-mini-item{
+    background-color: #244AC2;
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+}
+.ms{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.ms p{
+  font-size: 12px;
+}
+.sma{
+  width: 8px;
+  height: 12px;
+}
 @media (min-width: 1024px) and (max-width: 1440px) {
-    body {
+    /* body {
       font-size: 18px;
       background-color: lightblue;
-    }
+    } */
 
     .padding{
         padding: 0vw 10vw;
+    }
+    .box{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .box-mini{
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+    .next img{
+      width: 48px;
     }
   }
 
   
   @media (min-width: 768px) and (max-width: 1023px) {
-    body {
+    /* body {
       font-size: 16px;
       background-color: lightgreen;
-    }
+    } */
 
     .padding{
         padding: 0vw 10vw;
+    }
+
+    .text-section{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .box{
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+    .box-mini{
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+    .next img{
+      width: 40px;
     }
   }
 
   
   @media (max-width: 767px) {
-    body {
+    /* body {
       font-size: 14px;
       background-color: lightpink;
-    }
+    } */
 
     .padding{
         padding: 0vw 10vw;
     }
+
+    .text-section{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .next img{
+      width: 32px;
+    }
+    .dot-box{
+      display: none;    
+    }
+  }
+
+  /* Nav */
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
   }
   
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
